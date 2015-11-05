@@ -4,6 +4,13 @@ class App < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  configure do
+    enable :logging
+    file = File.new("#{settings.root}/log/#{settings.environment}.log", "a+")
+    file.sync = true
+    use Rack::CommonLogger, file
+  end
+
   enable :sessions
 
   route :get, :post, "/" do
