@@ -6,10 +6,10 @@ form.text-center[action="/" method="POST"]
 
   .row
     .col-md-6
-        textarea[name="source" placeholder="HTML"]
+        textarea#source[name="source" placeholder="HTML"]
           = @source
     .col-md-6
-        textarea[name="target" placeholder="slim"]
+        textarea#target[name="target" placeholder="slim"]
           = @target
 
   input.btn[type="submit" value="convert"]
