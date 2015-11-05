@@ -4,6 +4,6 @@ class App < Sinatra::Base
   end
 
   get "/" do
-    "Hello, World!"
+    slim :index
   end
 end
