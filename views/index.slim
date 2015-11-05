@@ -1,8 +1,9 @@
 h1
   a[href="/"] HTML2slim
 
-form.text-center[action="/" method="POST"]
-  input.btn[type="submit" value="convert"]
+form[action="/" method="POST"]
+  .text-center
+    input.btn[type="submit" value="convert"]
 
   .row
     .col-md-6
@@ -12,4 +13,5 @@ form.text-center[action="/" method="POST"]
         textarea#target[name="target" placeholder="slim"]
           = @target
 
-  input.btn[type="submit" value="convert"]
+  .text-center
+    input.btn[type="submit" value="convert"]
