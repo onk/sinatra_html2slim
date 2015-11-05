@@ -5,6 +5,8 @@ class App < Sinatra::Base
   end
 
   route :get, :post, "/" do
+    @source = params[:source]
+    @target = params[:target]
     slim :index
   end
 end
