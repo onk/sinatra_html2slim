@@ -20,11 +20,10 @@ class App < Sinatra::Base
   route :get, :post, "/" do
     if params[:source]
       session[:source] = params[:source]
-    end
-    if session[:source]
       session[:target] = HTML2Slim::HTMLConverter.new(session[:source]).to_s
-      redirect to("/") if request.post?
+      redirect to("/")
     end
+
     @source = session[:source]
     @target = session[:target]
     session.clear
