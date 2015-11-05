@@ -11,11 +11,10 @@ class App < Sinatra::Base
     use Rack::CommonLogger, file
   end
 
-  use Rack::Session::Cookie, {
+  use Rack::Session::Dalli, {
+    namespace: "html2slim.session",
     key: "_html2slim_session",
-    path: "/",
     expire_after: 2_592_000, # 30 days
-    secret: "ff95aa1813dd96d629fddd29c2159c42351f37952508da880f533e8ed2478e7a"
   }
 
   route :get, :post, "/" do

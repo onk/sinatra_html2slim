@@ -3,6 +3,7 @@ GEM
   specs:
     backports (3.6.7)
     coderay (1.1.0)
+    dalli (2.7.4)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -43,6 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dalli
   html2slim
   pry
   pry-doc
