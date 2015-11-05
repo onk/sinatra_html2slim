@@ -27,6 +27,7 @@ class App < Sinatra::Base
     end
     @source = session[:source]
     @target = session[:target]
+    session.clear
     slim :index
   end
 end
