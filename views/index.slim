@@ -1,1 +1,13 @@
-h1 HTML2slim
+h1
+  a[href="/"] HTML2slim
+
+form.text-center[action="/" method="POST"]
+  input.btn[type="submit" value="convert"]
+
+  .row
+    .col-md-6
+        textarea[name="source" placeholder="HTML"]
+    .col-md-6
+        textarea[name="target" placeholder="slim"]
+
+  input.btn[type="submit" value="convert"]
