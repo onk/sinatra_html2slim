@@ -3,6 +3,9 @@ GEM
   specs:
     backports (3.6.7)
     coderay (1.1.0)
+    hpricot (0.8.6)
+    html2slim (0.2.0)
+      hpricot
     method_source (0.8.2)
     multi_json (1.11.2)
     pry (0.10.3)
@@ -40,6 +43,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  html2slim
   pry
   pry-doc
   sinatra

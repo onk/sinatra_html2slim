@@ -6,7 +6,9 @@ class App < Sinatra::Base
 
   route :get, :post, "/" do
     @source = params[:source]
-    @target = params[:target]
+    if @source
+      @target = HTML2Slim::HTMLConverter.new(params[:source]).to_s
+    end
     slim :index
   end
 end
