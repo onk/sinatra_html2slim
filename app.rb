@@ -1,9 +1,10 @@
 class App < Sinatra::Base
+  register Sinatra::MultiRoute
   configure :development do
     register Sinatra::Reloader
   end
 
-  get "/" do
+  route :get, :post, "/" do
     slim :index
   end
 end
